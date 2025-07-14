@@ -59,7 +59,7 @@ const AppComingSoon = ({ language = 'en' }) => {
   const t = translations[language];
 
   return (
-    <section className="relative py-16 overflow-hidden">
+    <section className="relative py-16 overflow-hidden bg-white">
       {/* Curved Background */}
       <div className="absolute inset-0">
         <svg

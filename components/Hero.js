@@ -70,7 +70,8 @@ const HeroSection = ({ language }) => {
     }, []);
 
     return (
-        <div className="relative min-h-screen overflow-hidden lg:mx-5 lg:border lg:border-gray-200 rounded-xl">
+        <div className='bg-white'>
+        <div className="relative min-h-screen overflow-hidden lg:mx-5 lg:border lg:border-gray-200 rounded-xl bg-white">
             {/* Animated Background */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-red-400">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-red-800/90"></div>
@@ -147,7 +148,7 @@ const HeroSection = ({ language }) => {
                     50% { transform: translateY(-20px); }
                 }
             `}</style>
-        </div>
+        </div></div>
     );
 };
 
