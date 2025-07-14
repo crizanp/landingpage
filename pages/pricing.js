@@ -415,7 +415,7 @@ const PricingPage = () => {
                         <li>Ages 36-50: Rs 9,239</li>
                         <li>Ages 51-64: Rs 13,776</li>
                     </ul>
-                    <h3>What's Included:</h3>
+                    <h3>Whats Included:</h3>
                     <ul>
                         <li>Insurance Premium (varies by age)</li>
                         <li>Welfare Fund: Rs 1,505</li>
@@ -440,7 +440,7 @@ const PricingPage = () => {
                 <nav className="bg-gray-50 py-4" aria-label="Breadcrumb">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <ol className="flex items-center space-x-2 text-sm text-gray-600">
-                            <li><a href="/" className="hover:text-red-600">Home</a></li>
+                            <li><Link href="/" className="hover:text-red-600">Home</Link></li>
                             <li>/</li>
                             <li className="text-gray-900 font-medium">Pricing</li>
                         </ol>

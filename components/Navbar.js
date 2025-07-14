@@ -101,25 +101,25 @@ const Navbar = ({ language, toggleLanguage }) => {
                     <div className="hidden lg:block">
                         <div className="flex items-center space-x-1">
 
-                            <a href="/#how-it-works" className="text-gray-700 hover:text-blue-600 hover:bg-red-50 px-4 py-2 rounded-md text-sm font-medium transition-all duration-200">
+                            <Link href="/#how-it-works" className="text-gray-700 hover:text-blue-600 hover:bg-red-50 px-4 py-2 rounded-md text-sm font-medium transition-all duration-200">
                                 {t.howItWorks}
-                            </a>
-                            <a href="/pricing" className="text-gray-700 hover:text-blue-600 hover:bg-red-50 px-4 py-2 rounded-md text-sm font-medium transition-all duration-200">
+                            </Link>
+                            <Link href="/pricing" className="text-gray-700 hover:text-blue-600 hover:bg-red-50 px-4 py-2 rounded-md text-sm font-medium transition-all duration-200">
                                 {t.pricing}
-                            </a>
-                            <a href="/about" className="text-gray-700 hover:text-blue-600 hover:bg-red-50 px-4 py-2 rounded-md text-sm font-medium transition-all duration-200">
+                            </Link>
+                            <Link href="/about" className="text-gray-700 hover:text-blue-600 hover:bg-red-50 px-4 py-2 rounded-md text-sm font-medium transition-all duration-200">
                                 {t.about}
-                            </a>
+                            </Link>
 
-                            <a href="#news" className="text-gray-700 hover:text-blue-600 hover:bg-red-50 px-4 py-2 rounded-md text-sm font-medium transition-all duration-200">
+                            <Link href="#news" className="text-gray-700 hover:text-blue-600 hover:bg-red-50 px-4 py-2 rounded-md text-sm font-medium transition-all duration-200">
                                 {t.news}
-                            </a>
-                            <a href="/#faqs" className="text-gray-700 hover:text-blue-600 hover:bg-red-50 px-4 py-2 rounded-md text-sm font-medium transition-all duration-200">
+                            </Link>
+                            <Link href="/#faqs" className="text-gray-700 hover:text-blue-600 hover:bg-red-50 px-4 py-2 rounded-md text-sm font-medium transition-all duration-200">
                                 {t.faqs}
-                            </a>
-                            <a href="/#contact" className="text-gray-700 hover:text-blue-600 hover:bg-red-50 px-4 py-2 rounded-md text-sm font-medium transition-all duration-200">
+                            </Link>
+                            <Link href="/#contact" className="text-gray-700 hover:text-blue-600 hover:bg-red-50 px-4 py-2 rounded-md text-sm font-medium transition-all duration-200">
                                 {t.contact}
-                            </a>
+                            </Link>
                         </div>
                     </div>
 
