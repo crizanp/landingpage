@@ -144,63 +144,62 @@ const ContactUs = ({ language = 'en' }) => {
   const t = translations[language];
 
   return (
-    <section className="py-16 bg-white"id='contact'>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-8 sm:py-12 lg:py-16 bg-white" id='contact'>
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
-         
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-6 sm:mb-8 lg:mb-12">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-4">
             {t.title}
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-2">
             {t.description}
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
           {/* Contact Information */}
-          <div className="space-y-8">
+          <div className="space-y-4 sm:space-y-6 lg:space-y-8">
             {/* Contact Cards */}
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
               {/* Phone */}
-              <div className="bg-white rounded-xl p-6  border border-gray-100  transition-shadow">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12  rounded-full flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-red-600" />
+              <div className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 border border-gray-100 transition-shadow">
+                <div className="flex items-center">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-red-600" />
                   </div>
-                  <div className="ml-4">
-                    <h3 className="font-semibold text-gray-900">{t.contact.phone.title}</h3>
-                    <p className="text-sm font-bold text-red-600">{t.contact.phone.number}</p>
+                  <div className="ml-3 sm:ml-4 min-w-0">
+                    <h3 className="font-semibold text-gray-900 text-sm sm:text-base">{t.contact.phone.title}</h3>
+                    <p className="text-sm sm:text-base font-bold text-red-600 truncate">{t.contact.phone.number}</p>
                   </div>
                 </div>
               </div>
 
               {/* Support Hours */}
-              <div className="bg-white rounded-xl p-6  border border-gray-100  transition-shadow">
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12  rounded-full flex items-center justify-center">
-                    <Clock className="w-6 h-6 text-green-600" />
+              <div className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 border border-gray-100 transition-shadow">
+                <div className="flex items-center">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                    <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-green-600" />
                   </div>
-                  <div className="ml-4">
-                    <h3 className="font-semibold text-gray-900">{t.contact.hours.title}</h3>
-                    <p className="text-sm text-gray-600">{t.contact.hours.time}</p>
+                  <div className="ml-3 sm:ml-4 min-w-0">
+                    <h3 className="font-semibold text-gray-900 text-sm sm:text-base">{t.contact.hours.title}</h3>
+                    <p className="text-xs sm:text-sm text-gray-600">{t.contact.hours.time}</p>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Email */}
-            <div className="bg-white rounded-xl p-6  border border-gray-100">
+            <div className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 border border-gray-100">
               <div className="flex items-start">
-                <div className="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-6 h-6 text-red-600" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-red-600" />
                 </div>
-                <div className="ml-4">
-                  <h3 className="font-semibold text-gray-900 mb-2">{t.contact.email.title}</h3>
-                  <p className="text-red-600 hover:text-red-800 cursor-pointer mb-1">
+                <div className="ml-3 sm:ml-4 min-w-0 flex-1">
+                  <h3 className="font-semibold text-gray-900 mb-1 sm:mb-2 text-sm sm:text-base">{t.contact.email.title}</h3>
+                  <p className="text-red-600 hover:text-red-800 cursor-pointer mb-1 text-sm sm:text-base break-all">
                     {t.contact.email.primary}
                   </p>
-                  <p className="text-red-600 hover:text-red-800 cursor-pointer">
+                  <p className="text-red-600 hover:text-red-800 cursor-pointer text-sm sm:text-base break-all">
                     {t.contact.email.secondary}
                   </p>
                 </div>
@@ -208,34 +207,32 @@ const ContactUs = ({ language = 'en' }) => {
             </div>
 
             {/* Address */}
-            <div className="bg-white rounded-xl p-6  border border-gray-100">
+            <div className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-6 border border-gray-100">
               <div className="flex items-start">
-                <div className="w-12 h-12  rounded-full flex items-center justify-center flex-shrink-0">
-                  <MapPin className="w-6 h-6 text-red-600" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-red-600" />
                 </div>
-                <div className="ml-4">
-                  <h3 className="font-semibold text-gray-900 mb-2">{t.contact.address.title}</h3>
-                  <p className="text-gray-600">{t.contact.address.location}</p>
+                <div className="ml-3 sm:ml-4 min-w-0">
+                  <h3 className="font-semibold text-gray-900 mb-1 sm:mb-2 text-sm sm:text-base">{t.contact.address.title}</h3>
+                  <p className="text-gray-600 text-sm sm:text-base">{t.contact.address.location}</p>
                 </div>
               </div>
             </div>
-
-           
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white rounded-xl  border border-gray-100 p-8">
+          <div className="bg-white rounded-lg sm:rounded-xl border border-gray-100 p-4 sm:p-6 lg:p-8">
             {isSubmitted ? (
-              <div className="text-center py-8">
-                <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">Message Sent!</h3>
-                <p className="text-gray-600">{t.form.success}</p>
+              <div className="text-center py-6 sm:py-8">
+                <CheckCircle className="w-12 h-12 sm:w-16 sm:h-16 text-green-500 mx-auto mb-3 sm:mb-4" />
+                <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">Message Sent!</h3>
+                <p className="text-gray-600 text-sm sm:text-base px-2">{t.form.success}</p>
               </div>
             ) : (
-              <div onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid sm:grid-cols-2 gap-4">
+              <div className="space-y-4 sm:space-y-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2">
                       {t.form.name} *
                     </label>
                     <input
@@ -243,12 +240,12 @@ const ContactUs = ({ language = 'en' }) => {
                       name="name"
                       value={formData.name}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors"
+                      className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-md sm:rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors text-sm sm:text-base"
                       required
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2">
                       {t.form.email} *
                     </label>
                     <input
@@ -256,15 +253,15 @@ const ContactUs = ({ language = 'en' }) => {
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors"
+                      className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-md sm:rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors text-sm sm:text-base"
                       required
                     />
                   </div>
                 </div>
 
-                <div className="grid sm:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2">
                       {t.form.phone}
                     </label>
                     <input
@@ -272,11 +269,11 @@ const ContactUs = ({ language = 'en' }) => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors"
+                      className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-md sm:rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors text-sm sm:text-base"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">
+                    <label className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2">
                       {t.form.subject}
                     </label>
                     <input
@@ -284,21 +281,21 @@ const ContactUs = ({ language = 'en' }) => {
                       name="subject"
                       value={formData.subject}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors"
+                      className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-md sm:rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors text-sm sm:text-base"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
+                  <label className="block text-sm font-medium text-gray-700 mb-1 sm:mb-2">
                     {t.form.message} *
                   </label>
                   <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleInputChange}
-                    rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors resize-none"
+                    rows={4}
+                    className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-md sm:rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors resize-none text-sm sm:text-base"
                     required
                   />
                 </div>
@@ -306,21 +303,21 @@ const ContactUs = ({ language = 'en' }) => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-red-600 text-white py-3 px-6 rounded-lg hover:bg-red-700 focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition-all duration-200 flex items-center justify-center space-x-2 font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full bg-red-600 text-white py-2.5 sm:py-3 px-4 sm:px-6 rounded-md sm:rounded-lg hover:bg-red-700 focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition-all duration-200 flex items-center justify-center space-x-2 font-medium disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base"
                 >
                   {isSubmitting ? (
                     <>
-                      <div className="animate-spin rounded-full h-4 w-4 border-2 border-white border-t-transparent"></div>
+                      <div className="animate-spin rounded-full h-3 w-3 sm:h-4 sm:w-4 border-2 border-white border-t-transparent"></div>
                       <span>{t.form.submitting}</span>
                     </>
                   ) : (
                     <>
-                      <Send className="w-4 h-4" />
+                      <Send className="w-3 h-3 sm:w-4 sm:h-4" />
                       <span>{t.form.submit}</span>
                     </>
                   )}
                 </button>
-              </div>
+                              </div>
             )}
           </div>
         </div>

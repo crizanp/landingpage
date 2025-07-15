@@ -116,26 +116,29 @@ const SimpleFAQ = ({ language = 'en' }) => {
   const t = translations[language];
 
   return (
-    <section className="py-8 sm:py-12 lg:py-16 bg-gradient-to-br from-blue-50 to-white"id='faqs'>
+    <section
+      className="py-8 sm:py-12 lg:py-16 bg-gradient-to-br from-blue-50 to-white"
+      id="faqs"
+    >
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
             {t.title}
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-gray-600 px-4">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-600 px-2 sm:px-4">
             {t.subtitle}
           </p>
         </div>
 
         {/* FAQ Items */}
-        <div className="space-y-4 sm:space-y-6 mb-12 sm:mb-16">
+        <div className="space-y-4 sm:space-y-6 mb-10 sm:mb-16">
           {t.faqs.map((faq, index) => (
             <div
               key={index}
               className="bg-white rounded-lg sm:rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200 border border-gray-100 p-4 sm:p-6"
             >
-              <div className="flex items-start gap-3 sm:gap-4">
+              <div className="flex items-start gap-3 sm:gap-4 flex-wrap sm:flex-nowrap">
                 <div className="flex-shrink-0 mt-1">
                   <HelpCircle className="w-5 h-5 sm:w-6 sm:h-6 text-blue-500" />
                 </div>
@@ -151,10 +154,9 @@ const SimpleFAQ = ({ language = 'en' }) => {
             </div>
           ))}
         </div>
-
-      
       </div>
     </section>
+
   );
 };
 

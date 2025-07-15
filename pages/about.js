@@ -313,15 +313,15 @@ const AboutUsPage = () => {
                 <meta name="author" content="Nepal Shram" />
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-                
+
                 {/* Canonical URL */}
                 <link rel="canonical" href={currentSeo.canonicalUrl} />
-                
+
                 {/* Alternate Language Links */}
                 <link rel="alternate" href="https://nepalishram.com/about" hrefLang="en" />
                 <link rel="alternate" href="https://nepalishram.com/about-np" hrefLang="ne" />
                 <link rel="alternate" href="https://nepalishram.com/about" hrefLang="x-default" />
-                
+
                 {/* Open Graph / Facebook */}
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={currentSeo.canonicalUrl} />
@@ -333,7 +333,7 @@ const AboutUsPage = () => {
                 <meta property="og:image:alt" content="Nepal Shram - About Us" />
                 <meta property="og:site_name" content="Nepal Shram" />
                 <meta property="og:locale" content={language === 'en' ? 'en_US' : 'ne_NP'} />
-                
+
                 {/* Twitter */}
                 <meta property="twitter:card" content="summary_large_image" />
                 <meta property="twitter:url" content={currentSeo.canonicalUrl} />
@@ -341,23 +341,23 @@ const AboutUsPage = () => {
                 <meta property="twitter:description" content={currentSeo.ogDescription} />
                 <meta property="twitter:image" content="https://nepalishram.com/assets/Nepalishram.png" />
                 <meta property="twitter:image:alt" content="Nepal Shram - About Us" />
-                
+
                 {/* Additional SEO Meta Tags */}
                 <meta name="geo.region" content="NP" />
                 <meta name="geo.placename" content="Nepal" />
                 <meta name="geo.position" content="27.7172;85.3240" />
                 <meta name="ICBM" content="27.7172, 85.3240" />
-                
+
                 {/* Favicon */}
                 <link rel="icon" href="/favicon.ico" />
                 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
                 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
                 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-                
+
                 {/* DNS Prefetch for Performance */}
                 <link rel="dns-prefetch" href="//fonts.googleapis.com" />
                 <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
-                
+
                 {/* Structured Data */}
                 <script
                     type="application/ld+json"
@@ -371,7 +371,7 @@ const AboutUsPage = () => {
                         __html: JSON.stringify(breadcrumbStructuredData)
                     }}
                 />
-                
+
                 {/* Additional Meta Tags for About Page */}
                 <meta name="DC.title" content={currentSeo.title} />
                 <meta name="DC.description" content={currentSeo.description} />
@@ -379,23 +379,23 @@ const AboutUsPage = () => {
                 <meta name="DC.language" content={language === 'en' ? 'en' : 'ne'} />
                 <meta name="DC.coverage" content="Nepal" />
                 <meta name="DC.type" content="Text.AboutPage" />
-                
+
                 {/* Business/Organization Meta Tags */}
                 <meta name="business.name" content="Nepal Shram" />
                 <meta name="business.type" content="Labor Service Provider" />
                 <meta name="business.country" content="Nepal" />
                 <meta name="business.industry" content="Foreign Employment Services" />
-                
+
                 {/* Mobile App Meta Tags */}
                 <meta name="apple-mobile-web-app-capable" content="yes" />
                 <meta name="apple-mobile-web-app-status-bar-style" content="default" />
                 <meta name="apple-mobile-web-app-title" content="Nepal Shram About" />
-                
+
                 {/* Security Headers */}
                 <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
                 <meta httpEquiv="X-Frame-Options" content="DENY" />
                 <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-                
+
                 {/* Preload Critical Resources */}
                 <link rel="preload" href="/assets/nepalishram_logo.png" as="image" />
             </Head>
@@ -405,8 +405,8 @@ const AboutUsPage = () => {
                 <div className="sr-only">
                     <h1>About Nepal Shram - Leading Labor Permit Service Provider</h1>
                     <p>
-                        Nepal Shram is a government-approved digital platform specializing in Nepal labor permit services (श्रम स्वीकृति). 
-                        We have successfully processed over 50,000 applications with a 98% success rate, helping Nepali workers 
+                        Nepal Shram is a government-approved digital platform specializing in Nepal labor permit services (श्रम स्वीकृति).
+                        We have successfully processed over 50,000 applications with a 98% success rate, helping Nepali workers
                         achieve their dreams of overseas employment.
                     </p>
                     <ul>
@@ -425,48 +425,58 @@ const AboutUsPage = () => {
                     <Navbar language={language} toggleLanguage={toggleLanguage} />
 
                     {/* Breadcrumb */}
-                    <nav className="bg-gray-50 py-4" aria-label="Breadcrumb">
+                    <nav className="bg-gray-50 py-3 sm:py-4" aria-label="Breadcrumb">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                             <p className="text-sm text-gray-600">{t.breadcrumb}</p>
                         </div>
                     </nav>
 
                     {/* Hero Section */}
-                    <header className="bg-red-50 text-white py-20">
+                    <header className="bg-red-50 py-12 sm:py-20">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                            <h1 className="text-4xl lg:text-5xl font-bold mb-6 text-black">{t.heroTitle}</h1>
-                            <p className="text-xl text-blue-100 max-w-3xl mx-auto leading-relaxed text-gray-600">
+                            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
+                                {t.heroTitle}
+                            </h1>
+                            <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
                                 {t.heroDescription}
                             </p>
                         </div>
                     </header>
 
                     {/* Mission, Vision, Values */}
-                    <section className="py-16 bg-white" aria-labelledby="mission-vision-heading">
+                    <section className="py-12 sm:py-16 bg-white" aria-labelledby="mission-vision-heading">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <h2 id="mission-vision-heading" className="sr-only">Our Mission, Vision, and Values</h2>
-                            <div className="grid md:grid-cols-3 gap-8">
-                                <article className="text-center">
+                            <h2 id="mission-vision-heading" className="sr-only">
+                                Our Mission, Vision, and Values
+                            </h2>
+                            <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 text-center">
+                                <article>
                                     <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
                                         <Target className="w-8 h-8 text-white" />
                                     </div>
-                                    <h3 className="text-2xl font-bold text-gray-900 mb-4">{t.mission.title}</h3>
+                                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
+                                        {t.mission.title}
+                                    </h3>
                                     <p className="text-gray-600 leading-relaxed">{t.mission.description}</p>
                                 </article>
 
-                                <article className="text-center">
+                                <article>
                                     <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
                                         <Eye className="w-8 h-8 text-white" />
                                     </div>
-                                    <h3 className="text-2xl font-bold text-gray-900 mb-4">{t.vision.title}</h3>
+                                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
+                                        {t.vision.title}
+                                    </h3>
                                     <p className="text-gray-600 leading-relaxed">{t.vision.description}</p>
                                 </article>
 
-                                <article className="text-center">
+                                <article>
                                     <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
                                         <Heart className="w-8 h-8 text-white" />
                                     </div>
-                                    <h3 className="text-2xl font-bold text-gray-900 mb-4">{t.values.title}</h3>
+                                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
+                                        {t.values.title}
+                                    </h3>
                                     <p className="text-gray-600 leading-relaxed">{t.values.description}</p>
                                 </article>
                             </div>
@@ -474,19 +484,24 @@ const AboutUsPage = () => {
                     </section>
 
                     {/* Key Features */}
-                    <section className="py-16 bg-white" id="services" aria-labelledby="features-heading">
+                    <section className="py-12 sm:py-16 bg-white" id="services" aria-labelledby="features-heading">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <h2 id="features-heading" className="text-3xl font-bold text-center text-gray-900 mb-12">{t.features.title}</h2>
-                            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            <h2 id="features-heading" className="text-2xl sm:text-3xl font-bold text-center text-gray-900 mb-10">
+                                {t.features.title}
+                            </h2>
+                            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                                 {t.features.items.map((feature, index) => {
                                     const Icon = feature.icon;
                                     return (
-                                        <article key={index} className="text-center p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow duration-300">
+                                        <article
+                                            key={index}
+                                            className="text-center p-6 rounded-xl border border-gray-200 hover:shadow-lg transition-shadow duration-300"
+                                        >
                                             <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
                                                 <Icon className="w-8 h-8 text-gray-600" />
                                             </div>
-                                            <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
-                                            <p className="text-gray-600">{feature.description}</p>
+                                            <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
+                                            <p className="text-gray-600 text-sm sm:text-base">{feature.description}</p>
                                         </article>
                                     );
                                 })}
@@ -494,18 +509,15 @@ const AboutUsPage = () => {
                         </div>
                     </section>
 
-                  
-
-                
-
-                   
-
+                    {/* FAQ + Contact */}
                     <SimpleFAQ language={language} />
                     <ContactUs language={language} />
                 </main>
-                
+
+                {/* Footer */}
                 <Footer language={language} />
             </div>
+
         </>
     );
 };

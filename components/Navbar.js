@@ -30,6 +30,8 @@ const Navbar = ({ language, toggleLanguage }) => {
             subtitle: "श्रम समाधान नेपाल",
             home: "गृह पृष्ठ",
             howItWorks: "यसले कसरी काम गर्छ",
+                        pricing: "शुल्क ",
+
             services: "सेवाहरू",
             about: "हाम्रो बारेमा",
             whyUs: "किन हामी",
@@ -149,23 +151,23 @@ const Navbar = ({ language, toggleLanguage }) => {
                     <div className="lg:hidden pb-4">
                         <div className="px-2 pt-2 pb-3  bg-gray-50 rounded-xl mt-2 shadow-lg">
 
-                            <a href="#how-it-works" className="text-gray-700 hover:text-red-600 hover:bg-red-50 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
+                            <a href="/#how-it-works" className="text-gray-700 hover:text-red-600 hover:bg-red-50 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
                                 {t.howItWorks}
                             </a>
-                            <a href="#pricing" className="text-gray-700 hover:text-red-600 hover:bg-red-50 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
+                            <a href="/pricing" className="text-gray-700 hover:text-red-600 hover:bg-red-50 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
                                 {t.pricing}
                             </a>
-                            <a href="#about" className="text-gray-700 hover:text-red-600 hover:bg-red-50 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
+                            <a href="/about" className="text-gray-700 hover:text-red-600 hover:bg-red-50 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
                                 {t.about}
                             </a>
 
-                            <a href="#news" className="text-gray-700 hover:text-red-600 hover:bg-red-50 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
+                            <a href="/#news" className="text-gray-700 hover:text-red-600 hover:bg-red-50 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
                                 {t.news}
                             </a>
-                            <a href="#faqs" className="text-gray-700 hover:text-red-600 hover:bg-red-50 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
+                            <a href="/#faqs" className="text-gray-700 hover:text-red-600 hover:bg-red-50 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
                                 {t.faqs}
                             </a>
-                            <a href="#contact" className="text-gray-700 hover:text-red-600 hover:bg-red-50 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
+                            <a href="/#contact" className="text-gray-700 hover:text-red-600 hover:bg-red-50 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
                                 {t.contact}
                             </a>
                             <div className="px-4 py-3">

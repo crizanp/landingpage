@@ -401,166 +401,195 @@ const PricingPage = () => {
                 <link rel="preload" href="/assets/pricing-hero.jpg" as="image" />
             </Head>
 
-            <div className="font-sans">
-                {/* Hidden SEO Content for Better Indexing */}
-                <div className="sr-only">
-                    <h1>Nepal Labor Permit Pricing - श्रम स्वीकृति Cost by Age Group</h1>
-                    <p>
-                        Get transparent pricing for Nepal Labor Permit (श्रम स्वीकृति) applications.
-                        Our age-based pricing structure ensures fair and competitive rates for all Nepali workers.
-                    </p>
-                    <h2>Labor Permit Cost by Age Group:</h2>
-                    <ul>
-                        <li>Ages 18-35: Rs 8,016 (Most Popular)</li>
-                        <li>Ages 36-50: Rs 9,239</li>
-                        <li>Ages 51-64: Rs 13,776</li>
-                    </ul>
-                    <h3>Whats Included:</h3>
-                    <ul>
-                        <li>Insurance Premium (varies by age)</li>
-                        <li>Welfare Fund: Rs 1,505</li>
-                        <li>Social Security Fund (SSF): Rs 2,308</li>
-                        <li>Professional Service Charge: Rs 500</li>
-                    </ul>
-                    <h3>Professional Services Include:</h3>
-                    <ul>
-                        <li>Complete document preparation and verification</li>
-                        <li>Government liaison and submission support</li>
-                        <li>Real-time application status tracking</li>
-                        <li>24/7 multilingual customer support</li>
-                        <li>Fast processing guarantee (3-5 working days)</li>
-                        <li>Secure online payment processing</li>
-                    </ul>
+           <div className="font-sans">
+  {/* Hidden SEO Content for Better Indexing */}
+  <div className="sr-only">
+    <h1>Nepal Labor Permit Pricing - श्रम स्वीकृति Cost by Age Group</h1>
+    <p>
+      Get transparent pricing for Nepal Labor Permit (श्रम स्वीकृति) applications.
+      Our age-based pricing structure ensures fair and competitive rates for all Nepali workers.
+    </p>
+    <h2>Labor Permit Cost by Age Group:</h2>
+    <ul>
+      <li>Ages 18-35: Rs 8,016 (Most Popular)</li>
+      <li>Ages 36-50: Rs 9,239</li>
+      <li>Ages 51-64: Rs 13,776</li>
+    </ul>
+    <h3>What's Included:</h3>
+    <ul>
+      <li>Insurance Premium (varies by age)</li>
+      <li>Welfare Fund: Rs 1,505</li>
+      <li>Social Security Fund (SSF): Rs 2,308</li>
+      <li>Professional Service Charge: Rs 500</li>
+    </ul>
+    <h3>Professional Services Include:</h3>
+    <ul>
+      <li>Complete document preparation and verification</li>
+      <li>Government liaison and submission support</li>
+      <li>Real-time application status tracking</li>
+      <li>24/7 multilingual customer support</li>
+      <li>Fast processing guarantee (3-5 working days)</li>
+      <li>Secure online payment processing</li>
+    </ul>
+  </div>
+
+  {/* Navbar */}
+  <Navbar language={language} toggleLanguage={toggleLanguage} />
+
+  {/* Breadcrumb */}
+  <nav className="bg-gray-50 py-3 sm:py-4" aria-label="Breadcrumb">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <ol className="flex items-center space-x-2 text-sm text-gray-600">
+        <li><Link href="/" className="hover:text-red-600">Home</Link></li>
+        <li>/</li>
+        <li className="text-gray-900 font-medium">Pricing</li>
+      </ol>
+    </div>
+  </nav>
+
+  {/* Hero Section */}
+  <header className="bg-red-50 py-12 sm:py-20">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 text-gray-900">
+        {t.heroTitle}
+      </h1>
+      <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        {t.heroDescription}
+      </p>
+    </div>
+  </header>
+
+  {/* SEO Content Section */}
+  <section className="py-8 sm:py-12 bg-white">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="prose prose-gray max-w-none text-gray-700">
+        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">{t.seoText.title}</h2>
+        <p className="leading-relaxed">{t.seoText.content}</p>
+      </div>
+    </div>
+  </section>
+
+  {/* Pricing Cards */}
+  <section className="py-12 sm:py-16 bg-white">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {t.pricingPlans.map((plan, index) => (
+          <article
+            key={index}
+            className={`rounded-2xl p-6 sm:p-8 ${
+              plan.popular
+                ? 'bg-red-50 border-2 border-red-200 transform scale-[1.03]'
+                : 'bg-white border border-gray-200'
+            } shadow-lg hover:shadow-xl transition-all duration-300`}
+          >
+            {plan.popular && (
+              <div className="bg-red-600 text-white text-sm font-medium px-4 py-1.5 rounded-full inline-block mb-4">
+                Most Popular
+              </div>
+            )}
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6">{plan.ageGroup}</h3>
+            <div className="space-y-4">
+              {plan.features.map((feature, i) => (
+                <div
+                  key={i}
+                  className={`flex justify-between items-center py-3 ${
+                    feature.highlight ? 'border-t-2 border-red-200 pt-6' : ''
+                  }`}
+                >
+                  <span
+                    className={`${
+                      feature.highlight
+                        ? 'text-base sm:text-lg font-bold text-gray-900'
+                        : 'text-gray-600'
+                    }`}
+                  >
+                    {feature.name}
+                  </span>
+                  <span
+                    className={`${
+                      feature.highlight
+                        ? 'text-xl sm:text-2xl font-bold text-red-600'
+                        : 'text-base sm:text-lg font-semibold text-gray-900'
+                    }`}
+                  >
+                    {feature.price}
+                  </span>
                 </div>
-
-                {/* Main Content */}
-                <Navbar language={language} toggleLanguage={toggleLanguage} />
-
-                {/* Breadcrumb */}
-                <nav className="bg-gray-50 py-4" aria-label="Breadcrumb">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <ol className="flex items-center space-x-2 text-sm text-gray-600">
-                            <li><Link href="/" className="hover:text-red-600">Home</Link></li>
-                            <li>/</li>
-                            <li className="text-gray-900 font-medium">Pricing</li>
-                        </ol>
-                    </div>
-                </nav>
-
-                {/* Hero Section */}
-                <header className="bg-red-50 py-20">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                        <h1 className="text-4xl lg:text-5xl font-bold mb-6 text-gray-900">{t.heroTitle}</h1>
-                        <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                            {t.heroDescription}
-                        </p>
-                    </div>
-                </header>
-
-                {/* SEO Content Section */}
-                <section className="py-8 bg-white">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="prose max-w-none">
-                            <h2 className="text-2xl font-bold text-gray-900 mb-4">{t.seoText.title}</h2>
-                            <p className="text-gray-600 leading-relaxed">
-                                {t.seoText.content}
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                {/* Pricing Cards */}
-                <section className="py-16 bg-white">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="grid md:grid-cols-3 gap-8">
-                            {t.pricingPlans.map((plan, index) => (
-                                <article key={index} className={`rounded-2xl p-8 ${plan.popular ? 'bg-red-50 border-2 border-red-200 transform scale-105' : 'bg-white border border-gray-200'} shadow-lg hover:shadow-xl transition-all duration-300`}>
-                                    {plan.popular && (
-                                        <div className="bg-red-600 text-white text-sm font-medium px-4 py-2 rounded-full inline-block mb-4">
-                                            Most Popular
-                                        </div>
-                                    )}
-                                    <h3 className="text-2xl font-bold text-gray-900 mb-6">{plan.ageGroup}</h3>
-
-                                    <div className="space-y-4">
-                                        {plan.features.map((feature, featureIndex) => (
-                                            <div key={featureIndex} className={`flex justify-between items-center py-3 ${feature.highlight ? 'border-t-2 border-red-200 pt-6' : ''}`}>
-                                                <span className={`${feature.highlight ? 'text-lg font-bold text-gray-900' : 'text-gray-600'}`}>
-                                                    {feature.name}
-                                                </span>
-                                                <span className={`${feature.highlight ? 'text-2xl font-bold text-red-600' : 'text-lg font-semibold text-gray-900'}`}>
-                                                    {feature.price}
-                                                </span>
-                                            </div>
-                                        ))}
-                                    </div>
-
-                                    <Link
-                                        href="https://portal.nepalishram.com"
-                                        className={`block text-center w-full mt-8 py-3 px-4 rounded-lg font-medium transition-colors ${plan.popular
-                                            ? 'bg-red-600 text-white hover:bg-red-700'
-                                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                                            }`}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                    >
-                                        {t.cta.button}
-                                    </Link>
-                                </article>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
-                {/* Service Features */}
-                <section className="py-16 bg-gray-50">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="text-center mb-12">
-                            <h2 className="text-3xl font-bold text-gray-900 mb-4">{t.additionalInfo.title}</h2>
-                            <p className="text-lg text-gray-600 max-w-2xl mx-auto">{t.additionalInfo.description}</p>
-                        </div>
-
-                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {t.serviceFeatures.map((feature, index) => (
-                                <div key={index} className="flex items-center space-x-3 bg-white p-6 rounded-lg shadow-md">
-                                    <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />
-                                    <span className="text-gray-700 font-medium">{feature}</span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </section>
-
-                {/* CTA Section */}
-                <section className="py-16 bg-red-50 text-gray-900">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                        <h2 className="text-3xl font-bold mb-4">{t.cta.title}</h2>
-                        <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">{t.cta.description}</p>
-                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link
-                                href="https://portal.nepalishram.com"
-                                className="border-2 bg-red-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-black transition-colors text-center"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                {t.cta.button}
-                            </Link>
-                            <Link
-                                href="/#contact"
-                                className="border-2 border-red-600 text-red-600 px-8 py-3 rounded-lg font-medium hover:bg-red-600 hover:text-white transition-colors"
-                                rel="noopener noreferrer"
-                            >
-                                {t.cta.contact}
-                            </Link>
-
-
-                        </div>
-                    </div>
-                </section>
-
-                {/* Footer */}
-                <Footer language={language} />
+              ))}
             </div>
+            <Link
+              href="https://portal.nepalishram.com"
+              className={`block text-center w-full mt-8 py-3 px-4 rounded-lg font-medium transition-colors ${
+                plan.popular
+                  ? 'bg-red-600 text-white hover:bg-red-700'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              }`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t.cta.button}
+            </Link>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* Service Features */}
+  <section className="py-12 sm:py-16 bg-gray-50">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="text-center mb-10 sm:mb-12">
+        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+          {t.additionalInfo.title}
+        </h2>
+        <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+          {t.additionalInfo.description}
+        </p>
+      </div>
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {t.serviceFeatures.map((feature, index) => (
+          <div
+            key={index}
+            className="flex items-start gap-3 bg-white p-5 rounded-xl shadow-md"
+          >
+            <CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0 mt-1" />
+            <span className="text-gray-700 font-medium">{feature}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  {/* CTA Section */}
+  <section className="py-12 sm:py-16 bg-red-50 text-gray-900">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 className="text-2xl sm:text-3xl font-bold mb-4">{t.cta.title}</h2>
+      <p className="text-base sm:text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
+        {t.cta.description}
+      </p>
+      <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <Link
+          href="https://portal.nepalishram.com"
+          className="border-2 bg-red-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-black transition-colors text-center"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {t.cta.button}
+        </Link>
+        <Link
+          href="/#contact"
+          className="border-2 border-red-600 text-red-600 px-8 py-3 rounded-lg font-medium hover:bg-red-600 hover:text-white transition-colors text-center"
+        >
+          {t.cta.contact}
+        </Link>
+      </div>
+    </div>
+  </section>
+
+  {/* Footer */}
+  <Footer language={language} />
+</div>
+
         </>
     );
 };
