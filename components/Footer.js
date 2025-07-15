@@ -2,10 +2,10 @@ import React from 'react';
 
 const Footer = ({ language = 'en' }) => {
     const footerLinks = [
-        { name: 'Privacy', href: '/privacy' },
-        { name: 'How to Use', href: '/how-to-use' },
+        { name: 'Privacy', href: '/privacypolicy' },
+        { name: 'How to Use', href: 'https://portal.nepalishram.com/tutorial' },
         { name: 'Agreement', href: '/agreement' },
-        { name: 'About Us', href: '/about-us' },
+        { name: 'About Us', href: '/about' },
         { name: 'Contact', href: '/#contact' },
         { name: 'Portal', href: 'https://portal.nepalishram.com' }
     ];
