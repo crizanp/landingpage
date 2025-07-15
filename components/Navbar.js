@@ -151,25 +151,25 @@ const Navbar = ({ language, toggleLanguage }) => {
                     <div className="lg:hidden pb-4">
                         <div className="px-2 pt-2 pb-3  bg-gray-50 rounded-xl mt-2 shadow-lg">
 
-                            <a href="/#how-it-works" className="text-gray-700 hover:text-red-600 hover:bg-red-50 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
+                            <Link href="/#how-it-works" className="text-gray-700 hover:text-red-600 hover:bg-red-50 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
                                 {t.howItWorks}
-                            </a>
-                            <a href="/pricing" className="text-gray-700 hover:text-red-600 hover:bg-red-50 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
+                            </Link>
+                            <Link href="/pricing" className="text-gray-700 hover:text-red-600 hover:bg-red-50 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
                                 {t.pricing}
-                            </a>
-                            <a href="/about" className="text-gray-700 hover:text-red-600 hover:bg-red-50 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
+                            </Link>
+                            <Link href="/about" className="text-gray-700 hover:text-red-600 hover:bg-red-50 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
                                 {t.about}
-                            </a>
+                            </Link>
 
-                            <a href="/#news" className="text-gray-700 hover:text-red-600 hover:bg-red-50 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
+                            <Link href="/#news" className="text-gray-700 hover:text-red-600 hover:bg-red-50 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
                                 {t.news}
-                            </a>
-                            <a href="/#faqs" className="text-gray-700 hover:text-red-600 hover:bg-red-50 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
+                            </Link>
+                            <Link href="/#faqs" className="text-gray-700 hover:text-red-600 hover:bg-red-50 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
                                 {t.faqs}
-                            </a>
-                            <a href="/#contact" className="text-gray-700 hover:text-red-600 hover:bg-red-50 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
+                            </Link>
+                            <Link href="/#contact" className="text-gray-700 hover:text-red-600 hover:bg-red-50 block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200">
                                 {t.contact}
-                            </a>
+                            </Link>
                             <div className="px-4 py-3">
                                 <button className="w-full bg-gradient-to-r from-red-600 to-red-700 text-white px-4 py-3 rounded-lg text-sm font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-200 shadow-md flex items-center justify-center space-x-2">
                                     <Globe className="w-4 h-4" />

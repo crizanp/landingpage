@@ -415,7 +415,7 @@ const PricingPage = () => {
                         <li>Ages 36-50: Rs 9,239</li>
                         <li>Ages 51-64: Rs 13,776</li>
                     </ul>
-                    <h3>What's Included:</h3>
+                    <h3>Whats Included:</h3>
                     <ul>
                         <li>Insurance Premium (varies by age)</li>
                         <li>Welfare Fund: Rs 1,505</li>
