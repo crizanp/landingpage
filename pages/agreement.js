@@ -178,7 +178,7 @@ const SimpleAgreementPage = () => {
         <div className="min-h-screen bg-gradient-to-br from-blue-50 to-red-50">
             {/* Navigation Bar */}
             <Navbar language={language} toggleLanguage={toggleLanguage} />
- {/* Breadcrumb */}
+            {/* Breadcrumb */}
             <nav className="bg-gray-50 py-3 sm:py-4" aria-label="Breadcrumb">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <ol className="flex items-center space-x-2 text-sm text-gray-600">
@@ -191,22 +191,22 @@ const SimpleAgreementPage = () => {
 
             {/* Header */}
             {/* Header */}
-<div className="bg-red-100 text-gray-900 py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
-    <div className="max-w-7xl mx-auto text-center">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">{t.title}</h1>
-        <p className="text-lg sm:text-xl text-gray-700 mb-6">{t.subtitle}</p>
-        <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-8">
-            <div className="flex items-center space-x-2">
-                <Calendar className="w-5 h-5" />
-                <span className="text-gray-700">{t.lastUpdated}</span>
+            <div className="bg-red-100 text-gray-900 py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto text-center">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">{t.title}</h1>
+                    <p className="text-lg sm:text-xl text-gray-700 mb-6">{t.subtitle}</p>
+                    <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-8">
+                        <div className="flex items-center space-x-2">
+                            <Calendar className="w-5 h-5" />
+                            <span className="text-gray-700">{t.lastUpdated}</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                            <CheckCircle className="w-5 h-5" />
+                            <span className="text-gray-700">{t.header?.effectiveDate || "Effective: July 15, 2025"}</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div className="flex items-center space-x-2">
-                <CheckCircle className="w-5 h-5" />
-                <span className="text-gray-700">{t.header?.effectiveDate || "Effective: July 15, 2025"}</span>
-            </div>
-        </div>
-    </div>
-</div>
 
 
             {/* Main Content */}
@@ -298,8 +298,8 @@ const SimpleAgreementPage = () => {
                                 }
                             }}
                             className={`flex-1 py-3 px-6 rounded-lg font-semibold transition-colors ${agreed
-                                    ? 'bg-red-600 text-white hover:bg-red-700'
-                                    : 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                                ? 'bg-red-600 text-white hover:bg-red-700'
+                                : 'bg-gray-300 text-gray-500 cursor-not-allowed'
                                 }`}
                         >
                             {t.agreement.button}

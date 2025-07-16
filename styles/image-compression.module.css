@@ -1,0 +1,733 @@
+
+  
+  /* App Container */
+  .appContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #880707;
+  }
+  
+  .header h1 {
+    color: #880707;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+  
+  .header p {
+    color: #666;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Mode Selector */
+  .modeSelector {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+  }
+  
+  .modeButton {
+    padding: 0.75rem 1.5rem;
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #555;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .modeButton svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+  
+  .modeButton:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .activeButton {
+    background-color: #880707;
+    color: white;
+    box-shadow: 0 2px 8px rgba(136, 7, 7, 0.2);
+  }
+  
+  .activeButton:hover {
+    background-color: #700606;
+  }
+  
+  /* Converter Container */
+  .converterContainer {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+  
+  .converterHeading {
+    color: #880707;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    position: relative;
+  }
+  
+  .converterHeading::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #880707;
+    margin: 0.75rem auto 0;
+    border-radius: 2px;
+  }
+  
+  /* Content Layout */
+  .contentContainer {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .leftPanel {
+    flex: 3;
+  }
+  
+  .rightPanel {
+    flex: 2;
+  }
+  
+  /* File Input */
+  .fileInputContainer {
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .fileInputLabel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 160px;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border: 2px dashed #880707;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .fileInputIconContainer {
+    margin-bottom: 1rem;
+  }
+  
+  .fileInputIcon {
+    width: 3rem;
+    height: 3rem;
+    fill: #880707;
+  }
+  
+  .fileInputText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .fileInputPrimary {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #880707;
+    margin-bottom: 0.5rem;
+  }
+  
+  .fileInputSecondary {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .fileInputLabel:hover, .dragActive {
+    background-color: #f8f0f0;
+  }
+  
+  .fileInputLabel input {
+    display: none;
+  }
+  
+  /* Selected Files */
+  .selectedFiles {
+    margin-bottom: 1.5rem;
+    padding: 1.25rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #eee;
+  }
+  
+  .selectedFilesHeading {
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .filesList {
+    list-style-type: none;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .fileItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.2s ease;
+  }
+  
+  .fileItem:hover {
+    background-color: #f8f8f8;
+  }
+  
+  .fileItemIcon {
+    width: 2rem;
+    height: 2rem;
+    background-color: #f3e5e5;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.75rem;
+  }
+  
+  .fileItemInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .fileItemName {
+    font-weight: 500;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 250px;
+  }
+  
+  .fileItemSize {
+    font-size: 0.8rem;
+    color: #666;
+  }
+  
+  .fileDetails {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    cursor: pointer;
+  }
+  
+  .activePreview {
+    background-color: #f8f0f0;
+    border-radius: 4px;
+  }
+  
+  .removeFileButton {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    line-height: 1;
+    color: #aaa;
+    cursor: pointer;
+    padding: 0 0.5rem;
+  }
+  
+  .removeFileButton:hover {
+    color: #880707;
+  }
+  
+  /* Options Container */
+  .optionsContainer {
+    margin-bottom: 1.5rem;
+    padding: 1.25rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid #eee;
+  }
+  
+  .optionTitle {
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333;
+    font-size: 1rem;
+  }
+  
+  .optionRow {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+    align-items: center;
+  }
+  
+  .optionRow label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    color: #333;
+  }
+  
+  .optionRow input[type="range"] {
+    width: 150px;
+    accent-color: #880707;
+  }
+  
+  .optionRow input[type="number"] {
+    width: 80px;
+    padding: 0.25rem 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .optionRow input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: #880707;
+  }
+  
+  .sliderWithValue {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .sliderWithValue span {
+    min-width: 3rem;
+    text-align: right;
+  }
+  
+  /* Action Buttons */
+  .actionButtons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .convertButton {
+    padding: 0.75rem 1.5rem;
+    background-color: #880707;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 2px 6px rgba(136, 7, 7, 0.2);
+  }
+  
+  .convertButton:hover {
+    background-color: #700606;
+  }
+  
+  .buttonDisabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+  
+  .buttonDisabled:hover {
+    background-color: #ccc;
+  }
+  
+  .resetButton {
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    color: #666;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .resetButton:hover {
+    background-color: #f8f8f8;
+    border-color: #ccc;
+  }
+  
+  /* Progress Bar */
+  .progressContainer {
+    margin: 1.25rem 0;
+    height: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .progressBar {
+    height: 100%;
+    background-color: #880707;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+  }
+  
+  .progressText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: white;
+  }
+  
+  /* Spinner */
+  .spinnerIcon {
+    display: inline-block;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Status Message */
+  .statusMessage {
+    margin-top: 1.25rem;
+    padding: 0.75rem;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    text-align: center;
+    color: #333;
+    font-size: 0.95rem;
+    border: 1px solid #eee;
+  }
+  
+  /* Preview Container */
+  .previewContainer {
+    background-color: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    height: 100%;
+  }
+  
+  .previewTitle {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  
+  .previewContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  
+  .phonePreview {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .phoneFrame {
+    background-color: #222;
+    border-radius: 2rem;
+    padding: 0.75rem;
+    position: relative;
+    aspect-ratio: 9/16;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .phoneNotch {
+    width: 40%;
+    height: 1.5rem;
+    background-color: #222;
+    border-radius: 0 0 0.75rem 0.75rem;
+    margin: 0 auto 0.5rem;
+  }
+  
+  .phoneScreen {
+    flex: 1;
+    background-color: white;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .previewCanvas {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .phoneHome {
+    width: 30%;
+    height: 0.25rem;
+    background-color: #444;
+    border-radius: 1rem;
+    margin: 0.5rem auto 0;
+  }
+  
+  .previewInfo {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .previewInfo h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333;
+    word-break: break-word;
+  }
+  
+  .previewSizeInfo {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  .emptyPreview {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    gap: 1rem;
+  }
+  
+  .emptyPreview svg {
+    fill: #ccc;
+  }
+  
+  /* Download Container */
+  .downloadContainer {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+  }
+  
+  .downloadHeader {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .downloadIcon {
+    flex-shrink: 0;
+  }
+  
+  .downloadIcon svg {
+    fill: #28a745;
+  }
+  
+  .downloadText h3 {
+    color: #28a745;
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+  }
+  
+  .downloadText p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  .compressionResults {
+    width: 100%;
+    margin: 1rem 0 1.5rem;
+    max-height: 250px;
+    overflow-y: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    background-color: white;
+  }
+  
+  .compressionResult {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .compressionResult:last-child {
+    border-bottom: none;
+  }
+  
+  .resultDetails {
+    flex: 1;
+  }
+  
+  .resultName {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+    word-break: break-word;
+  }
+  
+  .resultStats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.85rem;
+    color: #666;
+  }
+  
+  .resultStats span {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    white-space: nowrap;
+  }
+  
+  .downloadItemButton {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 0.4rem 0.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #333;
+    transition: all 0.2s ease;
+  }
+  
+  .downloadItemButton:hover {
+    background-color: #880707;
+    color: white;
+  }
+  
+  .downloadAllButton {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(40, 167, 69, 0.2);
+    text-align: center;
+  }
+  
+  .downloadAllButton:hover {
+    background-color: #218838;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+    border-top: 1px solid #eee;
+  }
+  
+  .footer a {
+    color: #880707;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 992px) {
+    .contentContainer {
+      flex-direction: column;
+    }
+    
+    .rightPanel {
+      order: -1;
+      margin-bottom: 1.5rem;
+    }
+    
+    .phonePreview {
+      max-width: 220px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .appContainer {
+      padding: 1rem;
+    }
+    
+    .converterContainer {
+      padding: 1.5rem;
+    }
+    
+    .modeSelector {
+      flex-wrap: wrap;
+    }
+    
+    .modeButton {
+      flex: 1;
+      min-width: 120px;
+      justify-content: center;
+    }
+    
+    .fileItemName {
+      max-width: 180px;
+    }
+    
+    .actionButtons {
+      flex-direction: column;
+    }
+    
+    .header h1 {
+      font-size: 1.75rem;
+    }
+    
+    .downloadHeader {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
