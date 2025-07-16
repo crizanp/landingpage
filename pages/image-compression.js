@@ -21,7 +21,7 @@ function ImageCompression() {
     const imageInputRef = useRef(null);
     const fileDropRef = useRef(null);
     const canvasRef = useRef(null);
-const [language, setLanguage] = useState('en');
+    const [language, setLanguage] = useState('en');
     const [agreed, setAgreed] = useState(false);
 
     const toggleLanguage = () => {
@@ -648,7 +648,8 @@ const [language, setLanguage] = useState('en');
                         </button>
                     </div>
                 )}
-            </div>               <Footer language={language} />
+            </div>               
+            <Footer language={language} />
         </>
 
     );

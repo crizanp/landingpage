@@ -116,6 +116,8 @@
   .fileInputContainer {
     margin-bottom: 1.5rem;
     position: relative;
+    width: 70%;
+    margin: 0 auto;
   }
   
   .fileInputLabel {
