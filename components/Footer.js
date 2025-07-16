@@ -7,6 +7,7 @@ const Footer = ({ language = 'en' }) => {
         { name: 'Agreement', href: '/agreement' },
         { name: 'About Us', href: '/about' },
         { name: 'Contact', href: '/#contact' },
+        { name: 'Compression', href: '/image-compression' },
         { name: 'Portal', href: 'https://portal.nepalishram.com' }
     ];
 

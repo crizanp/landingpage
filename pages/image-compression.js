@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import styles from '../styles/image-compression.module.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Link from 'next/link';
 
 function ImageCompression() {
     const [selectedImages, setSelectedImages] = useState([]);
@@ -366,8 +367,25 @@ function ImageCompression() {
     return (
         <>
             <Navbar language={language} toggleLanguage={toggleLanguage} />
+            {/* Breadcrumb */}
+            <nav className="bg-gray-50 py-3 sm:py-4" aria-label="Breadcrumb">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <ol className="flex items-center space-x-2 text-sm text-gray-600">
+                        <li><Link href="/" className="hover:text-red-600">Home</Link></li>
+                        <li>/</li>
+                        <li className="text-gray-900 font-medium">Agreement</li>
+                    </ol>
+                </div>
+            </nav> {/* Header */}
+            <div className="bg-red-50 text-gray-800 py-8 sm:py-10 px-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto text-center">
+                    <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 ">Compress Image</h1>
+                    <p className="text-lg sm:text-lg text-gray-700 mb-6">Compress your images before uploading. reduce file size to meet form limits, save space, and simplify sharing.</p>
+
+                </div>
+            </div>
             <div className={styles.converterContainer}>
-                <h2 className={styles.converterHeading}>Compress & Resize Images</h2>
+
 
                 <div className={styles.contentContainer}>
                     {/* Left panel - File upload and settings */}
@@ -648,7 +666,7 @@ function ImageCompression() {
                         </button>
                     </div>
                 )}
-            </div>               
+            </div>
             <Footer language={language} />
         </>
 
