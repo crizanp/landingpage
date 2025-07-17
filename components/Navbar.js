@@ -54,7 +54,7 @@ const Navbar = ({ language, toggleLanguage }) => {
                         <div className="hidden md:flex items-center space-x-6">
                             <div className="flex items-center space-x-2">
                                 <Phone className="w-4 h-4" />
-                                <span>+977-9842997378</span>
+                                <span>+977-9842997378/9818879753</span>
                             </div>
                             <div className="flex items-center space-x-2">
                                 <Mail className="w-4 h-4" />
@@ -62,7 +62,7 @@ const Navbar = ({ language, toggleLanguage }) => {
                             </div>
                             <div className="flex items-center space-x-2">
                                 <MapPin className="w-4 h-4" />
-                                <span>काठमाडौं, नेपाल</span>
+                                <span>काठमाडौं, नेपाल (kalanki 14)</span>
                             </div>
                         </div>
                         <div className="flex items-center space-x-2">

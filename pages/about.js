@@ -144,7 +144,7 @@ const AboutUsPage = () => {
 
             // Hero Section
             heroTitle: "Empowering Nepali Workers Worldwide",
-            heroDescription: "We are dedicated to providing seamless, efficient, and reliable labor permit services to Nepali workers seeking employment opportunities abroad.",
+            heroDescription: "We are dedicated to providing smooth, efficient, and reliable labor permit services to Nepali workers seeking job opportunities abroad. And I wish to be a part of your future with us too! Your dreams and efforts truly matter — and we’ll always be here to support you. May your trust and love stay with our service, always working for the well-being of every hardworking soul.",
 
             // Mission & Vision
             mission: {
@@ -231,7 +231,7 @@ const AboutUsPage = () => {
 
             // Hero Section
             heroTitle: "विश्वव्यापी नेपाली श्रमिकहरूलाई सशक्त बनाउँदै",
-            heroDescription: "हामी विदेशमा रोजगारीका अवसरहरू खोज्ने नेपाली श्रमिकहरूलाई निर्बाध, कुशल र भरपर्दो श्रम अनुमति सेवाहरू प्रदान गर्न समर्पित छौं।",
+            heroDescription: "हामी विदेशमा रोजगारीका अवसरहरू खोज्ने नेपाली श्रमिकहरूलाई निर्बाध, कुशल र भरपर्दो श्रम अनुमति सेवाहरू प्रदान गर्न समर्पित छौं। र हामी प्रति तपाईंहरूको भविष्यमा म पनि सहभागी हुन चाहन्छु। तपाईंहरूको प्रयास र योजनामा हाम्रो साथ र सहयोग निरन्तर रहनेछ। श्रमिकहरूको भलाइका लागि समर्पित हाम्रो सेवामा तपाईंहरूको साथ र विश्वास सधैं रहोस्।",
 
             // Mission & Vision
             mission: {

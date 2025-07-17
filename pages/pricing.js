@@ -20,10 +20,10 @@ const PricingPage = () => {
     const seoContent = {
         en: {
             title: "Nepal Labor Permit Pricing - श्रम स्वीकृति Cost by Age Group | Nepal Shram",
-            description: "Check transparent pricing for Nepal Labor Permit (श्रम स्वीकृति) by age group. Rs 8,016 (18-35 years), Rs 9,239 (36-50 years), Rs 13,776 (51-64 years). Includes insurance, welfare fund, SSF.",
+            description: "Check transparent pricing for Nepal Labor Permit (श्रम स्वीकृति) by age group. Rs 7,881 (18-35 years), Rs 9,239 (36-50 years), Rs 13,636 (51-64 years). Includes insurance, welfare fund, SSF.",
             keywords: "nepal labor permit cost, श्रम स्वीकृति price, nepal shram pricing, labor permit fees nepal, foreign employment cost nepal, shram swikriti fees, nepal labor department fees, overseas employment cost",
             ogTitle: "Nepal Labor Permit Pricing - Age-wise Cost for श्रम स्वीकृति",
-            ogDescription: "Transparent pricing for Nepal Labor Permit applications. Age-based fees from Rs 8,016 to Rs 13,776. Includes insurance, welfare fund, and SSF contributions.",
+            ogDescription: "Transparent pricing for Nepal Labor Permit applications. Age-based fees from Rs 7,881 to Rs 13,636. Includes insurance, welfare fund, and SSF contributions.",
             canonicalUrl: "https://nepalishram.com/pricing"
         },
         np: {
@@ -121,15 +121,15 @@ const PricingPage = () => {
                 "name": "What is the cost of Nepal Labor Permit for different age groups?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "The cost varies by age: Rs 8,016 for ages 18-35, Rs 9,239 for ages 36-50, and Rs 13,776 for ages 51-64. This includes insurance, welfare fund, SSF, and service charges."
+                    "text": "The cost varies by age: Rs 7,881 for ages 18-35, Rs 9,239 for ages 36-50, and Rs 13,636 for ages 51-64. This includes insurance, welfare fund, SSF, and service charges."
                 }
             },
             {
                 "@type": "Question",
-                "name": "What is included in the Rs 500 service charge?",
+                "name": "What is included in the Rs 360 service charge?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "The Rs 500 service charge includes complete documentation assistance, government liaison support, status tracking, 24/7 customer support, and fast processing guarantee."
+                    "text": "The Rs 360 service charge includes complete documentation assistance, government liaison support, status tracking, 24/7 customer support, and fast processing guarantee."
                 }
             },
             {
@@ -172,8 +172,8 @@ const PricingPage = () => {
                         { name: "Insurance", price: "Rs 3,708" },
                         { name: "Welfare Fund", price: "Rs 1,505" },
                         { name: "Social Security Fund", price: "Rs 2,308" },
-                        { name: "Service Charge", price: "Rs 500" },
-                        { name: "Total", price: "Rs 8,016", highlight: true }
+                        { name: "Service Charge", price: "Rs 360" },
+                        { name: "Total", price: "Rs 7,881", highlight: true }
                     ]
                 },
                 {
@@ -183,8 +183,8 @@ const PricingPage = () => {
                         { name: "Insurance", price: "Rs 4,931" },
                         { name: "Welfare Fund", price: "Rs 1,505" },
                         { name: "Social Security Fund", price: "Rs 2,308" },
-                        { name: "Service Charge", price: "Rs 500" },
-                        { name: "Total", price: "Rs 9,244", highlight: true }
+                        { name: "Service Charge", price: "Rs 360" },
+                        { name: "Total", price: "Rs 9,104", highlight: true }
                     ]
                 },
                 {
@@ -194,8 +194,8 @@ const PricingPage = () => {
                         { name: "Insurance", price: "Rs 9,463" },
                         { name: "Welfare Fund", price: "Rs 1,505" },
                         { name: "Social Security Fund", price: "Rs 2,308" },
-                        { name: "Service Charge", price: "Rs 500" },
-                        { name: "Total", price: "Rs 13,776", highlight: true }
+                        { name: "Service Charge", price: "Rs 360" },
+                        { name: "Total", price: "Rs 13,636", highlight: true }
                     ]
                 }
             ],
@@ -208,7 +208,7 @@ const PricingPage = () => {
                 "Secure online payment"
             ],
             additionalInfo: {
-                title: "What is covered in Rs 500 Service Fee?",
+                title: "What is covered in Rs 360 Service Fee?",
                 description: "Full support from form fill-up to approval. No confusion. No hidden cost."
             },
             cta: {
@@ -411,16 +411,16 @@ const PricingPage = () => {
                     </p>
                     <h2>Labor Permit Cost by Age Group:</h2>
                     <ul>
-                        <li>Ages 18-35: Rs 8,016 (Most Popular)</li>
+                        <li>Ages 18-35: Rs 7,881 (Most Popular)</li>
                         <li>Ages 36-50: Rs 9,239</li>
-                        <li>Ages 51-64: Rs 13,776</li>
+                        <li>Ages 51-64: Rs 13,636</li>
                     </ul>
                     <h3>Whats Included:</h3>
                     <ul>
                         <li>Insurance Premium (varies by age)</li>
                         <li>Welfare Fund: Rs 1,505</li>
                         <li>Social Security Fund (SSF): Rs 2,308</li>
-                        <li>Professional Service Charge: Rs 500</li>
+                        <li>Professional Service Charge: Rs 360</li>
                     </ul>
                     <h3>Professional Services Include:</h3>
                     <ul>
