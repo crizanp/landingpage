@@ -79,7 +79,7 @@ const ContactUs = ({ language = 'en' }) => {
         },
         address: {
           title: "Office Address",
-          location: "Singha Durbar, Kathmandu, Nepal"
+          location: "Kathmandu, Nepal"
         },
         hours: {
           title: "Support Hours",
@@ -122,7 +122,7 @@ const ContactUs = ({ language = 'en' }) => {
         },
         address: {
           title: "कार्यालय ठेगाना",
-          location: "सिंह दरबार, काठमाडौं, नेपाल"
+          location: "काठमाडौं, नेपाल"
         },
         hours: {
           title: "सहायता समय",

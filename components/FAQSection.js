@@ -29,7 +29,7 @@ const SimpleFAQ = ({ language = 'en' }) => {
         },
         {
           question: "What are the fees for Labor Permit?",
-          answer: "The standard fee is NPR 1,500 for Labor Permit application. Additional charges may apply for express processing, document verification, and other services. Payment can be made online through digital wallets, banking, or cards."
+          answer: "The standard fee is NPR 360 for Labor Permit application service. Additional charges may apply for express processing, document verification, and other services. Payment can be made online through digital wallets, banking, or cards."
         },
         {
           question: "What payment methods are accepted?",
@@ -41,7 +41,7 @@ const SimpleFAQ = ({ language = 'en' }) => {
         },
         {
           question: "How can I get help if I have problems?",
-          answer: "You can contact our 24/7 customer support at +977-9842997378, email us at support@nepalshram.gov.np, or visit the nearest DoFE office. We also have live chat support available on our website."
+          answer: "You can contact our 24/7 customer support at +977-9842997378, email us at support@nepalshram.com, or visit the nearest DoFE office. We also have live chat support available on our website."
         },
         {
           question: "Can I modify my application after submission?",
@@ -52,7 +52,7 @@ const SimpleFAQ = ({ language = 'en' }) => {
         title: "Need More Help?",
         subtitle: "Contact our support team for personalized assistance",
         phone: "+977-9842997378",
-        email: "support@nepalshram.gov.np",
+        email: "support@nepalshram.com",
         address: "Department of Foreign Employment, Kathmandu, Nepal",
         hours: "24/7 Customer Support Available"
       }
@@ -83,7 +83,7 @@ const SimpleFAQ = ({ language = 'en' }) => {
         },
         {
           question: "श्रम अनुमतिको लागि शुल्क कति छ?",
-          answer: "श्रम अनुमति आवेदनको लागि मानक शुल्क रु. १,५०० छ। एक्सप्रेस प्रोसेसिंग, कागजात प्रमाणीकरण, र अन्य सेवाहरूको लागि थप शुल्क लाग्न सक्छ। भुक्तानी डिजिटल वालेट, बैंकिङ, वा कार्ड मार्फत अनलाइन गर्न सकिन्छ।"
+          answer: "श्रम अनुमति आवेदनको लागि मानक शुल्क रु. 360 छ। एक्सप्रेस प्रोसेसिंग, कागजात प्रमाणीकरण, र अन्य सेवाहरूको लागि थप शुल्क लाग्न सक्छ। भुक्तानी डिजिटल वालेट, बैंकिङ, वा कार्ड मार्फत अनलाइन गर्न सकिन्छ।"
         },
         {
           question: "कुन भुक्तानी विधिहरू स्वीकार गरिन्छन्?",
@@ -95,7 +95,7 @@ const SimpleFAQ = ({ language = 'en' }) => {
         },
         {
           question: "यदि मलाई समस्या छ भने कसरी सहायता पाउन सक्छु?",
-          answer: "तपाईं हाम्रो २४/७ ग्राहक सहायतालाई +977-9842997378 मा सम्पर्क गर्न सक्नुहुन्छ, हामीलाई support@nepalshram.gov.np मा इमेल गर्नुहोस्, वा नजिकैको DoFE कार्यालयमा जानुहोस्। हामीसँग हाम्रो वेबसाइटमा लाइभ च्याट सहयोग पनि उपलब्ध छ।"
+          answer: "तपाईं हाम्रो २४/७ ग्राहक सहायतालाई +977-9842997378 मा सम्पर्क गर्न सक्नुहुन्छ, हामीलाई support@nepalshram.com मा इमेल गर्नुहोस्, वा नजिकैको DoFE कार्यालयमा जानुहोस्। हामीसँग हाम्रो वेबसाइटमा लाइभ च्याट सहयोग पनि उपलब्ध छ।"
         },
         {
           question: "के म आवेदन बुझाएपछि परिमार्जन गर्न सक्छु?",
@@ -106,7 +106,7 @@ const SimpleFAQ = ({ language = 'en' }) => {
         title: "थप सहायता चाहिन्छ?",
         subtitle: "व्यक्तिगत सहायताको लागि हाम्रो सहयोग टोलीलाई सम्पर्क गर्नुहोस्",
         phone: "+977-9842997378",
-        email: "support@nepalshram.gov.np",
+        email: "support@nepalshram.com",
         address: "वैदेशिक रोजगार विभाग, काठमाडौं, नेपाल",
         hours: "२४/७ ग्राहक सहायता उपलब्ध"
       }
