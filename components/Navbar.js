@@ -62,7 +62,7 @@ const Navbar = ({ language, toggleLanguage }) => {
                             </div>
                             <div className="flex items-center space-x-2">
                                 <MapPin className="w-4 h-4" />
-                                <span>काठमाडौं, नेपाल (kalanki 14)</span>
+                                <span>{language === 'en' ? 'Bhaktapur Madhyapur Thimi, Nepal' : 'भक्तपुर मध्यपुर थिमी, नेपाल'}</span>
                             </div>
                         </div>
                         <div className="flex items-center space-x-2">

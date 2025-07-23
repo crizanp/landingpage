@@ -79,7 +79,7 @@ const ContactUs = ({ language = 'en' }) => {
         },
         address: {
           title: "Office Address",
-          location: "Kathmandu, Nepal"
+          location: "Bhaktapur Madhyapur Thimi"
         },
         hours: {
           title: "Support Hours",
@@ -112,8 +112,8 @@ const ContactUs = ({ language = 'en' }) => {
       },
       contact: {
         phone: {
-          title: "निःशुल्क नम्बर",
-          number: "११०१"
+          title: "सम्पर्क नम्बर",
+          number: "9842997378"
         },
         email: {
           title: "इमेल सहायता",
@@ -122,7 +122,7 @@ const ContactUs = ({ language = 'en' }) => {
         },
         address: {
           title: "कार्यालय ठेगाना",
-          location: "काठमाडौं, नेपाल"
+          location: "भक्तपुर मध्यपुर थिमी"
         },
         hours: {
           title: "सहायता समय",
