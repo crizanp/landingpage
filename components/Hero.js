@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 const HeroSection = ({ language }) => {
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
     const translations = {
         en: {
@@ -72,9 +73,9 @@ const HeroSection = ({ language }) => {
     return (
         <div className='bg-white'>
             <div className="relative min-h-screen overflow-hidden lg:mx-5 lg:border lg:border-gray-200 rounded-xl bg-white">
-                {/* Animated Background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-red-400">
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-red-800/90"></div>
+                {/* Solid Blue Background */}
+                <div className="absolute inset-0" style={{backgroundColor: '#00337a'}}>
+                    <div className="absolute inset-0 bg-blue-900/20"></div>
                     <div className="absolute inset-0 opacity-10">
                         <div className="w-full h-full" style={{
                             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
@@ -91,10 +92,19 @@ const HeroSection = ({ language }) => {
                                 {/* Main Title */}
                                 <div className="space-y-4">
                                     <h1 className="text-4xl lg:text-6xl font-bold leading-tight pt-12 lg:pt-0">
-                                        <span className="block text-white">{t.heroTitle.split(' ').slice(0, 2).join(' ')}</span>
-                                        <span className="block bg-gradient-to-r from-red-400 to-yellow-400 bg-clip-text text-transparent">
-                                            {t.heroTitle.split(' ').slice(2).join(' ')}
-                                        </span>
+                                        {language === 'en' ? (
+                                            <>
+                                                <span className="text-white">One App for All </span>
+                                                <span className="text-yellow-400">Nepali Shram</span>
+                                                <span className="text-white"> Services</span>
+                                            </>
+                                        ) : (
+                                            <>
+                                                <span className="text-white">सबै </span>
+                                                <span className="text-yellow-400">नेपाली श्रम</span>
+                                                <span className="text-white"> सेवाहरूका लागि एउटै एप</span>
+                                            </>
+                                        )}
                                     </h1>
                                 </div>
 
@@ -127,19 +137,67 @@ const HeroSection = ({ language }) => {
                                 </div>
                             </div>
 
-                            {/* Right Content - Hero Image */}
+                            {/* Right Content - YouTube Video Showcase */}
                             <div className="relative">
                                 <div className="relative z-10">
-                                    <img
-                                        src="assets/heroimage.png"
-                                        alt="Nepali Labor Services"
-                                        className="w-full h-auto max-w-lg mx-auto rounded-2xl  transform hover:scale-105 transition-transform duration-300"
-                                    />
+                                    <div className="w-full max-w-lg mx-auto rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300 cursor-pointer"
+                                         onClick={() => setIsVideoModalOpen(true)}>
+                                        <div className="relative">
+                                            <iframe
+                                                width="100%"
+                                                height="315"
+                                                src="https://www.youtube.com/embed/j8Kfr8Jqc24"
+                                                title="Nepali Shram Showcase"
+                                                frameBorder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                allowFullScreen
+                                                className="aspect-video"
+                                            ></iframe>
+                                            {/* Play overlay indicator */}
+                                            <div className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-all duration-300">
+                                                <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center shadow-lg">
+                                                    <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                                        <path d="M8 5v14l11-7z"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                {/* Video Modal */}
+                {isVideoModalOpen && (
+                    <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4"
+                         onClick={() => setIsVideoModalOpen(false)}>
+                        <div className="relative w-full max-w-4xl aspect-video">
+                            {/* Close button */}
+                            <button
+                                onClick={() => setIsVideoModalOpen(false)}
+                                className="absolute -top-10 right-0 text-white hover:text-red-400 transition-colors duration-200 z-10"
+                            >
+                                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                            {/* Large video player */}
+                            <iframe
+                                width="100%"
+                                height="100%"
+                                src="https://www.youtube.com/embed/j8Kfr8Jqc24?autoplay=1"
+                                title="Nepali Shram Showcase"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowFullScreen
+                                className="rounded-lg"
+                                onClick={(e) => e.stopPropagation()}
+                            ></iframe>
+                        </div>
+                    </div>
+                )}
 
                 {/* Custom Styles */}
                 <style jsx>{`
