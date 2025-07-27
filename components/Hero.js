@@ -13,7 +13,7 @@ const HeroSection = ({ language }) => {
             heroTitle: "One App for All Nepali Shram Services",
             heroSubtitle: "Simplifying Government Services with One App",
             description:
-                "Apply for श्रम स्वीकृति (Labor Permit) online with ease. Get your work permit approved faster through our streamlined digital platform.",
+                "Apply for your Labor Permit online. Easy, safe, and no extra agent fees. We are not a government site, but we help you step by step.",
             applyNow: "Apply Now",
             learnMore: "Learn More",
             trustedBy: "Trusted by 50,000+ Nepali Workers",
@@ -36,7 +36,7 @@ const HeroSection = ({ language }) => {
             heroTitle: "सबै नेपाली श्रम सेवाहरूका लागि एउटै एप",
             heroSubtitle: "एकै एपमा सबै सरकारी सेवा सजिलै",
             description:
-                "श्रम स्वीकृतिको लागि सजिलैसँग अनलाइन आवेदन दिनुहोस्। हाम्रो सुव्यवस्थित डिजिटल प्लेटफर्म मार्फत छिटो काम अनुमतिको स्वीकृति पाउनुहोस्।",
+                "श्रम स्वीकृति अनलाइन आवेदन दिनुहोस्। सजिलो, सुरक्षित, कुनै अतिरिक्त एजेन्ट शुल्क छैन। यो सरकारी साइट होइन, तर हामी तपाईंलाई एक एक कदममा सहयोग गर्छौं।",
             applyNow: "अहिले नै आवेदन दिनुहोस्",
             learnMore: "थप जान्नुहोस्",
             trustedBy: "५०,००० भन्दा बढी नेपाली श्रमिकहरूको भरोसा",
