@@ -8,6 +8,10 @@ const SimpleFAQ = ({ language = 'en' }) => {
       subtitle: "Find answers to common questions about Nepal Labor Permit application process",
       faqs: [
         {
+          question: "What is the role of this platform?",
+          answer: "The platform serves as an intermediary between the Government of Nepal and individuals seeking labor approval (Shram). It is designed to simplify and streamline the process of obtaining Shram approval."
+        },
+        {
           question: "What is Nepal Labor Permit System?",
           answer: "The Nepal Labor Permit System is a digital platform that allows Nepali citizens to apply for labor permits (श्रम स्वीकृति) online for foreign employment. This system streamlines the process of obtaining necessary approvals from the Department of Foreign Employment (DoFE) for working abroad legally."
         },
@@ -61,6 +65,10 @@ const SimpleFAQ = ({ language = 'en' }) => {
       title: "बारम्बार सोधिने प्रश्नहरू",
       subtitle: "नेपाल श्रम अनुमति आवेदन प्रक्रियाको बारेमा सामान्य प्रश्नहरूको जवाफ पाउनुहोस्",
       faqs: [
+        {
+          question: "यो प्लेटफर्मको भूमिका के हो?",
+          answer: "यो प्लेटफर्म नेपाल सरकार र श्रम स्वीकृति (श्रम) खोज्ने व्यक्तिहरूबीचको मध्यस्थको रूपमा कार्य गर्दछ। श्रम स्वीकृति प्राप्त गर्ने प्रक्रिया सरल र सुव्यवस्थित बनाउन डिजाइन गरिएको हो।"
+        },
         {
           question: "नेपाल श्रम अनुमति प्रणाली के हो?",
           answer: "नेपाल श्रम अनुमति प्रणाली एक डिजिटल प्लेटफर्म हो जसले नेपाली नागरिकहरूलाई वैदेशिक रोजगारीको लागि श्रम अनुमति (श्रम स्वीकृति) अनलाइन आवेदन दिन अनुमति दिन्छ। यो प्रणालीले वैदेशिक रोजगार विभाग (DoFE) बाट वैध रूपमा विदेश काम गर्नको लागि आवश्यक अनुमोदन प्राप्त गर्ने प्रक्रियालाई सुव्यवस्थित बनाउँछ।"

@@ -440,6 +440,14 @@ const AboutUsPage = () => {
                             <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
                                 {t.heroDescription}
                             </p>
+                           {/* Intermediary Disclaimer */}
+                           <div className="mt-8">
+                               <p className="text-xs sm:text-sm text-gray-500 italic max-w-2xl mx-auto bg-yellow-50 border-l-4 border-yellow-400 py-3 px-4 rounded">
+                                   {language === 'en'
+                                     ? 'The platform serves as an intermediary between the Government of Nepal and individuals seeking labor approval (Shram). It is designed to simplify and streamline the process of obtaining Shram approval.'
+                                     : 'यो प्लेटफर्म नेपाल सरकार र श्रम स्वीकृति (श्रम) खोज्ने व्यक्तिहरूबीचको मध्यस्थको रूपमा कार्य गर्दछ। श्रम स्वीकृति प्राप्त गर्ने प्रक्रिया सरल र सुव्यवस्थित बनाउन डिजाइन गरिएको हो।'}
+                               </p>
+                           </div>
                         </div>
                     </header>
 
