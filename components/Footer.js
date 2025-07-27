@@ -61,6 +61,12 @@ const Footer = ({ language = 'en' }) => {
                         </a>
                     </p>
                 </div>
+                {/* Disclaimer Section */}
+                <div className="text-center py-2">
+                    <p className="text-xs text-gray-400 italic max-w-2xl mx-auto">
+                        Disclaimer: The platform serves as an intermediary between the Government of Nepal and individuals seeking labor approval (Shram). It is designed to simplify and streamline the process of obtaining Shram approval.
+                    </p>
+                </div>
             </div>
         </footer>
     );
