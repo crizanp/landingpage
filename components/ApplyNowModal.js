@@ -59,7 +59,7 @@ const ApplyNowModal = ({ isOpen, onClose, language }) => {
             }
 
             // Construct WhatsApp message
-            const message = language === 'en' 
+            const message = language === 'en'
                 ? `I am applying for the shram swikriti (labor permit). My details are:
 Name: ${formData.name}
 Email: ${formData.email}
@@ -74,7 +74,7 @@ Please guide me with the further process. What should I do next?`
 कृपया मलाई अगाडिको प्रक्रिया बारे मार्गदर्शन गर्नुहोस्। मैले अब के गर्नुपर्छ?`;
 
             // WhatsApp Business API or direct WhatsApp link
-            const phoneNumber = "9779842997378"; // Your WhatsApp business number
+            const phoneNumber = "9779708023083"; // Your WhatsApp business number
             const encodedMessage = encodeURIComponent(message);
             const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 

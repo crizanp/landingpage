@@ -8,7 +8,7 @@ const Footer = ({ language = 'en' }) => {
         { name: 'About Us', href: '/about' },
         { name: 'Disclaimer', href: '/disclaimer' },
         { name: 'Compression', href: '/image-compression' },
-        { name: 'Portal', href: 'https://portal.nepalishram.com' }
+        // { name: 'Portal', href: 'https://portal.nepalishram.com' }
     ];
 
     return (
