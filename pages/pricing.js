@@ -7,13 +7,23 @@ import {
 } from 'lucide-react';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import ApplyNowModal from '@/components/ApplyNowModal';
 import Link from 'next/link';
 
 const PricingPage = () => {
     const [language, setLanguage] = useState('en');
+    const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
 
     const toggleLanguage = () => {
         setLanguage(language === 'en' ? 'np' : 'en');
+    };
+
+    const openApplyModal = () => {
+        setIsApplyModalOpen(true);
+    };
+
+    const closeApplyModal = () => {
+        setIsApplyModalOpen(false);
     };
 
     // SEO content based on language
@@ -513,17 +523,15 @@ const PricingPage = () => {
                                             </div>
                                         ))}
                                     </div>
-                                    <Link
-                                        href="https://portal.nepalishram.com"
+                                    <button
+                                        onClick={openApplyModal}
                                         className={`block text-center w-full mt-8 py-3 px-4 rounded-lg font-medium transition-colors ${plan.popular
                                                 ? 'bg-red-600 text-white hover:bg-red-700'
                                                 : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                                             }`}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
                                     >
                                         {t.cta.button}
-                                    </Link>
+                                    </button>
                                 </article>
                             ))}
                         </div>
@@ -563,14 +571,12 @@ const PricingPage = () => {
                             {t.cta.description}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Link
-                                href="https://portal.nepalishram.com"
+                            <button
+                                onClick={openApplyModal}
                                 className="border-2 bg-red-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-black transition-colors text-center"
-                                target="_blank"
-                                rel="noopener noreferrer"
                             >
                                 {t.cta.button}
-                            </Link>
+                            </button>
                             <Link
                                 href="/#contact"
                                 className="border-2 border-red-600 text-red-600 px-8 py-3 rounded-lg font-medium hover:bg-red-600 hover:text-white transition-colors text-center"
@@ -583,6 +589,13 @@ const PricingPage = () => {
 
                 {/* Footer */}
                 <Footer language={language} />
+
+                {/* Apply Now Modal */}
+                <ApplyNowModal 
+                    isOpen={isApplyModalOpen} 
+                    onClose={closeApplyModal} 
+                    language={language} 
+                />
             </div>
 
         </>

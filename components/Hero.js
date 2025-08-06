@@ -1,10 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Globe, ArrowRight, CheckCircle, Users, FileText, Clock, Shield, Star, Globe2 } from 'lucide-react';
 import Link from 'next/link';
+import ApplyNowModal from './ApplyNowModal';
 
 const HeroSection = ({ language }) => {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+    const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
+
+    const openApplyModal = () => {
+        setIsApplyModalOpen(true);
+    };
+
+    const closeApplyModal = () => {
+        setIsApplyModalOpen(false);
+    };
 
     const translations = {
         en: {
@@ -115,17 +125,15 @@ const HeroSection = ({ language }) => {
 
                                 {/* CTA Buttons */}
                                 <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                                    {/* External Link Button */}
-                                    <a
-                                        href="https://portal.nepalishram.com"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
+                                    {/* Apply Now Button */}
+                                    <button
+                                        onClick={openApplyModal}
                                         className="group bg-gradient-to-r from-red-600 to-red-700 text-white px-8 py-4 rounded-xl font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-300 shadow-2xl hover:shadow-red-500/25 transform hover:-translate-y-1 flex items-center justify-center space-x-2"
                                     >
                                         <Globe className="w-5 h-5" />
                                         <span>{t.applyNow}</span>
                                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                                    </a>
+                                    </button>
 
                                     {/* Internal Link Button (no <a> tag inside) */}
                                     <Link
@@ -206,6 +214,13 @@ const HeroSection = ({ language }) => {
                     50% { transform: translateY(-20px); }
                 }
             `}</style>
+
+            {/* Apply Now Modal */}
+            <ApplyNowModal 
+                isOpen={isApplyModalOpen} 
+                onClose={closeApplyModal} 
+                language={language} 
+            />
             </div></div>
     );
 };

@@ -2,12 +2,23 @@ import React, { useState } from 'react';
 import { Menu, X, Globe, Phone, Mail, MapPin } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import ApplyNowModal from './ApplyNowModal';
 
 const Navbar = ({ language, toggleLanguage }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
+    };
+
+    const openModal = () => {
+        setIsModalOpen(true);
+        setIsMenuOpen(false); // Close mobile menu if open
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
     };
 
     const translations = {
@@ -127,12 +138,13 @@ const Navbar = ({ language, toggleLanguage }) => {
 
                     {/* CTA Button */}
                     <div className="hidden lg:block">
-                        <Link href="https://portal.nepalishram.com" target="_blank" rel="noopener noreferrer">
-                            <button className="bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-3 rounded-lg text-sm font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 flex items-center space-x-2">
-                                <Globe className="w-4 h-4" />
-                                <span>{t.applyNow}</span>
-                            </button>
-                        </Link>
+                        <button 
+                            onClick={openModal}
+                            className="bg-gradient-to-r from-red-600 to-red-700 text-white px-6 py-3 rounded-lg text-sm font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-200 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 flex items-center space-x-2"
+                        >
+                            <Globe className="w-4 h-4" />
+                            <span>{t.applyNow}</span>
+                        </button>
                     </div>
 
                     {/* Mobile menu button */}
@@ -171,7 +183,10 @@ const Navbar = ({ language, toggleLanguage }) => {
                                 {t.contact}
                             </Link>
                             <div className="px-4 py-3">
-                                <button className="w-full bg-gradient-to-r from-red-600 to-red-700 text-white px-4 py-3 rounded-lg text-sm font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-200 shadow-md flex items-center justify-center space-x-2">
+                                <button 
+                                    onClick={openModal}
+                                    className="w-full bg-gradient-to-r from-red-600 to-red-700 text-white px-4 py-3 rounded-lg text-sm font-semibold hover:from-red-700 hover:to-red-800 transition-all duration-200 shadow-md flex items-center justify-center space-x-2"
+                                >
                                     <Globe className="w-4 h-4" />
                                     <span>{t.applyNow}</span>
                                 </button>
@@ -180,6 +195,13 @@ const Navbar = ({ language, toggleLanguage }) => {
                     </div>
                 )}
             </div>
+
+            {/* Apply Now Modal */}
+            <ApplyNowModal 
+                isOpen={isModalOpen} 
+                onClose={closeModal} 
+                language={language} 
+            />
         </nav>
     );
 };
