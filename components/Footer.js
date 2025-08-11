@@ -41,24 +41,16 @@ const Footer = ({ language = 'en' }) => {
                 {/* Copyright Section */}
                 <div className="text-center py-4 border-t border-gray-200 mt-4">
                     <p className="text-xs text-gray-500">
-                        © {new Date().getFullYear()} Nepali Shram. All rights reserved. Powered by{' '}
-                        <a 
-                            href="https://nxtechhosting.com" 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="text-red-600 hover:text-red-700 transition-colors"
-                        >
-                            NXtech
-                        </a>
-                        {' '}in coordination with{' '}
-                        <a 
-                            href="https://foxbeep.com" 
-                            target="_blank" 
+                        © {new Date().getFullYear()} Nepali Shram. All rights reserved. Site developed by{' '}
+                        <a
+                            href="https://foxbeep.com"
+                            target="_blank"
                             rel="noopener noreferrer"
                             className="text-red-600 hover:text-red-700 transition-colors"
                         >
                             Foxbeep Technology
                         </a>
+                       
                     </p>
                 </div>
                 {/* Disclaimer Section */}
